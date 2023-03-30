@@ -14,7 +14,9 @@
                   currency: "BRL"
                 })
               }}</p>
-              <p class="product-stock">{{prod.disponivel}}</p>
+              <p [ngClass]="{'product-stock': prod.disponivel, 'product-not-stock' : !prod.disponivel}">
+                {{prod.disponivel ? "DISPONÍVEL" : "ESGOTADO"}}
+              </p>
             </div>
           </div>
     </div>
