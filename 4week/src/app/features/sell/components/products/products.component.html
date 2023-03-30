@@ -1,23 +1,24 @@
 <section class="produtos">
-    <h1>{{title}}</h1>
-    <div class="card-container">
-    
-        <div class="card" *ngFor="let prod of produtos">
-            <div class="card-image">
-              <img src="{{prod.img}}" alt="Blusa">
-            </div>
-            <div class="card-info">
-              <h2 class="product-name">{{prod.nome}}</h2>
-              <p class="product-price">{{
-                prod.preco.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL"
-                })
-              }}</p>
-              <p [ngClass]="{'product-stock': prod.disponivel, 'product-not-stock' : !prod.disponivel}">
-                {{prod.disponivel ? "DISPONÍVEL" : "ESGOTADO"}}
-              </p>
-            </div>
-          </div>
+  <h1>{{title}}</h1>
+  <hr appBlue>
+  <div class="card-container">
+
+    <div class="card" *ngFor="let prod of produtos">
+      <div class="card-image">
+        <img src="{{prod.img}}" alt="Blusa">
+      </div>
+      <div class="card-info">
+        <h2 class="product-name">{{prod.nome}}</h2>
+        <p class="product-price">{{
+          prod.preco.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL"
+          })
+          }}</p>
+        <p [ngClass]="{'product-stock': prod.disponivel, 'product-not-stock' : !prod.disponivel}">
+          {{prod.disponivel ? "DISPONÍVEL" : "ESGOTADO"}}
+        </p>
+      </div>
     </div>
+  </div>
 </section>

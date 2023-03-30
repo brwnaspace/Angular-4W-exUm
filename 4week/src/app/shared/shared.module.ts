@@ -17,6 +17,7 @@ import { BlueDirective } from './directives/blue.directive';
   exports: [
     HeaderComponent,
     FooterComponent,
+    BlueDirective
   ]
 })
 export class SharedModule { }

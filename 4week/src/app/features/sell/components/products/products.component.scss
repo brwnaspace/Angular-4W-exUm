@@ -10,6 +10,13 @@
         font-size: 32px;
     }
 
+    hr {
+        width: 5%;
+        margin: auto;
+        height: 2px;
+        border: none;
+        margin-top: 20px;
+    }
     .card-container {
 
         display: flex;
@@ -82,7 +89,7 @@
 
         .card:hover {
             scale: 1.04;
-            border-color: #870a28;
+            border-color: black;
             transition: 0.3s ease-in-out;
         }
     }
