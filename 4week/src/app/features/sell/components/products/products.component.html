@@ -1,1 +1,21 @@
-<p>products works!</p>
+<section class="produtos">
+    <h1>{{title}}</h1>
+    <div class="card-container">
+    
+        <div class="card" *ngFor="let prod of produtos">
+            <div class="card-image">
+              <img src="{{prod.img}}" alt="Blusa">
+            </div>
+            <div class="card-info">
+              <h2 class="product-name">{{prod.nome}}</h2>
+              <p class="product-price">{{
+                prod.preco.toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL"
+                })
+              }}</p>
+              <p class="product-stock">{{prod.disponivel}}</p>
+            </div>
+          </div>
+    </div>
+</section>
